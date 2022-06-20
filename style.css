@@ -7,4 +7,38 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+.content {
+    background-color: rebeccapurple;
+    width: 750px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn{
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    border: 5px solid #fff;
+}
+
+.start-btn:hover{
+   letter-spacing: 0.35rem;
+   padding: 1rem 2.75rem;
+   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
