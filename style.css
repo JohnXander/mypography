@@ -20,6 +20,7 @@ body {
     height: 750px;
     display: flex;
     flex-direction: column;
+    row-gap: 1rem;
     justify-content: center;
     align-items: center;
     font-weight: normal;
@@ -65,6 +66,10 @@ a {
 }
 
 canvas {
+    background-color: #fff;
+}
+
+.letter{
     background-color: #fff;
 }
 

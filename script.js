@@ -3,6 +3,9 @@ const canvas = document.getElementById('canvas');
 
 const ctx = canvas.getContext('2d');
 
+const submitBtn = document.getElementById("submitBtn")
+const imgConverted = document.getElementById("imgConverted")
+
 let isPressed = false;
 let x = undefined;
 let y = undefined;
@@ -46,4 +49,10 @@ const drawLine = (x1, y1, x2, y2) => {
     ctx.lineWidth = 8 * 2;
     ctx.stroke();
 };
+
+submitBtn.addEventListener("click", () => {
+    const dataURI = canvas.toDataURL()
+    imgConverted.src = dataURI
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+})
 
