@@ -17,7 +17,7 @@ body {
     background-color: rebeccapurple;
     color: #fff;
     width: 750px;
-    height: 750px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -25,6 +25,7 @@ body {
     align-items: center;
     font-weight: normal;
     letter-spacing: 0.1rem;
+    padding: 2rem;
 }
 
 .start-btn{
@@ -69,7 +70,51 @@ canvas {
     background-color: #fff;
 }
 
-.letter{
+.instructions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions > span {
+    font-size: 1.25rem;
     background-color: #fff;
+    color: rebeccapurple;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.letter-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container-row > img {
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+}
+
+.space-after{
+    margin-right: 3rem;
+}
+
+.submit-btn{
+    font-family: inherit;
+    font-size: 1.25rem;
+    background-color: #9966CC;
+    color: #fff;
+    border: 3px solid #9966CC;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.submit-btn:hover{
+    border-color: #fff;
 }
 
