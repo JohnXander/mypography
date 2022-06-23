@@ -1,3 +1,5 @@
+//The five boxing wizards jump quickly
+
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
@@ -63,6 +65,7 @@ const container2 = document.getElementById("container2")
 const container3 = document.getElementById("container3")
 const container4 = document.getElementById("container4")
 
+const lowerCaseAlphabet = []
 let num = 0
 
 submitBtn.addEventListener("click", () => {
@@ -71,15 +74,15 @@ submitBtn.addEventListener("click", () => {
 
 const printLetterToBoard = () => {
     const iterableArr = Array(35).fill(0)
-    const dataURI = canvas.toDataURL()
+    const dataURL = canvas.toDataURL()
     num++
     iterableArr.map((_, idx) => {
         if (num === idx + 1) {
             const img = document.createElement("img")
             const space = document.createElement("span")
             space.innerHTML = "___"
-            img.src = dataURI
-            img.id = `img${idx + 1}`
+            img.src = dataURL
+            img.id = `lowerCase${idx + 1}`
 
             if (num === 4) container1.appendChild(space)
             if (num === 14) container2.appendChild(space)
@@ -90,8 +93,9 @@ const printLetterToBoard = () => {
             if (num > 8 && num <= 16) container2.appendChild(img)
             if (num > 16 && num <= 25) container3.appendChild(img)
             if (num > 25) container4.appendChild(img)
+
+            lowerCaseAlphabet.push(img)
         }
-        
     })
     context.clearRect(0, 0, canvas.width, canvas.height);
 }

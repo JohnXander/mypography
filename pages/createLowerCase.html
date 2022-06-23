@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="../styles/create.css">
+    <script src="../scripts/create.js" defer></script>
     <title>Mypography</title>
 </head>
 <body>
@@ -15,8 +15,13 @@
             <p>All letters MUST be <em>lowercase</em></p>
             <span>the quick brown fox jumps over the lazy dog</span>
         </div>
-        <canvas id="canvas" width="200" height="200"></canvas>
-        <button id="submitBtn" class="submit-btn">Submit</button>
+        <div class="create-container">
+            <canvas id="canvas" width="200" height="200"></canvas>
+            <div class="btn-container">
+                <p>Draw 1 letter in the box <br> and then click submit:</p>
+                <button id="submitBtn" class="submit-btn">Submit</button>
+            </div>
+        </div>
         <div class="letter-container">
             <div id="container1" class="container-row"></div>
             <div id="container2" class="container-row"></div>
