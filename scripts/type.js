@@ -1,4 +1,6 @@
-const lowerCaseAlphabet = JSON.parse(sessionStorage.getItem("imgArr"))
+const lowerCaseAlphabet = JSON.parse(sessionStorage.getItem("lowerAlpha"))
+lowerCaseAlphabet.push("../img/space.jpg")
+
 const keyboard = document.getElementById("keyboard")
 const notepad = document.getElementById("notepad")
 
@@ -28,7 +30,8 @@ const letterToImg = {
     w: lowerCaseAlphabet[11],
     x: lowerCaseAlphabet[15],
     y: lowerCaseAlphabet[31],
-    z: lowerCaseAlphabet[30]
+    z: lowerCaseAlphabet[30],
+    " ": lowerCaseAlphabet[35]
 }
 
 keyboard.addEventListener("keydown", (e) => {
@@ -41,9 +44,16 @@ const letterDisplay = document.getElementById("letterDisplay")
 const finishedBtn = document.getElementById("finishedBtn")
 const nonClickableLink = document.getElementById("nonClickableLink")
 
+const validChars = Object.keys(letterToImg)
+
 const changeLetterToImg = (event) => {
-    typedLetters.push(letterToImg[event.key])
-    displayLetters()
+    if (!validChars.includes(event.key)) {
+        alert("Cannot use that key yet")
+    } else {
+        typedLetters.push(letterToImg[event.key])
+        console.log(event)
+        displayLetters()
+    }
 }
 
 const displayLetters = () => {
@@ -54,6 +64,7 @@ const displayLetters = () => {
         letterImg.src = url
         letterDisplay.appendChild(letterImg)   
     })
+    
     finishedBtn.style.pointerEvents = "auto"
     nonClickableLink.style.pointerEvents = "auto"
     finishedBtn.style.backgroundColor = "#9966CC"

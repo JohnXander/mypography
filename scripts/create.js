@@ -106,11 +106,8 @@ const printLetterToBoard = () => {
             }
 
             lowerCaseAlphabet.push(dataURL)
-            sessionStorage.setItem("imgArr", JSON.stringify(lowerCaseAlphabet))
+            sessionStorage.setItem("lowerAlpha", JSON.stringify(lowerCaseAlphabet))
         }
     })
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
-
-
-//test:
