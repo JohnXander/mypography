@@ -1,4 +1,6 @@
-//The five boxing wizards jump quickly
+// The five boxing wizards jump quickly
+
+sessionStorage.clear()
 
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
@@ -103,8 +105,12 @@ const printLetterToBoard = () => {
                 finishedBtn.style.color = "#fff"
             }
 
-            lowerCaseAlphabet.push(img)
+            lowerCaseAlphabet.push(dataURL)
+            sessionStorage.setItem("imgArr", JSON.stringify(lowerCaseAlphabet))
         }
     })
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+
+//test:

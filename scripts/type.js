@@ -1,23 +1,56 @@
-// I'm just testing some things. This is not serious code
-
+const lowerCaseAlphabet = JSON.parse(sessionStorage.getItem("imgArr"))
 const keyboard = document.getElementById("keyboard")
 const notepad = document.getElementById("notepad")
 
-const c = document.createElement("img")
-c.style.width = "100px"
-c.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-const d = document.createElement("img")
-d.style.width = "100px"
-d.src = "https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
+const letterToImg = {
+    a: lowerCaseAlphabet[29],
+    b: lowerCaseAlphabet[8],
+    c: lowerCaseAlphabet[6],
+    d: lowerCaseAlphabet[32],
+    e: lowerCaseAlphabet[2],
+    f: lowerCaseAlphabet[13],
+    g: lowerCaseAlphabet[34],
+    h: lowerCaseAlphabet[1],
+    i: lowerCaseAlphabet[5],
+    j: lowerCaseAlphabet[16],
+    k: lowerCaseAlphabet[7],
+    l: lowerCaseAlphabet[28],
+    m: lowerCaseAlphabet[18],
+    n: lowerCaseAlphabet[12],
+    o: lowerCaseAlphabet[10],
+    p: lowerCaseAlphabet[19],
+    q: lowerCaseAlphabet[3],
+    r: lowerCaseAlphabet[9],
+    s: lowerCaseAlphabet[20],
+    t: lowerCaseAlphabet[0],
+    u: lowerCaseAlphabet[4],
+    v: lowerCaseAlphabet[22],
+    w: lowerCaseAlphabet[11],
+    x: lowerCaseAlphabet[15],
+    y: lowerCaseAlphabet[31],
+    z: lowerCaseAlphabet[30]
+}
 
 keyboard.addEventListener("keydown", (e) => {
-    if (e.key === "c") {
-        notepad.appendChild(c)
-    }
-    if (e.key === "d") {
-        notepad.appendChild(d)
-    }
+    changeLetterToImg(e)
 })
 
-// Press C to get an image of a cat
-// Press D to get an of a dog
+const typedLetters = []
+const letterDisplay = document.getElementById("letterDisplay")
+
+const changeLetterToImg = (event) => {
+    typedLetters.push(letterToImg[event.key])
+    displayLetters()
+}
+
+const displayLetters = () => {
+    letterDisplay.innerHTML = ""
+    typedLetters.map(url => {
+        const letterImg = document.createElement("img")
+        letterImg.style.width = "2rem"
+        letterImg.src = url
+        letterDisplay.appendChild(letterImg)   
+    })
+}
+
+
