@@ -59,6 +59,8 @@ const drawLine = (x1, y1, x2, y2) => {
 };
 
 const submitBtn = document.getElementById("submitBtn")
+const finishedBtn = document.getElementById("finishedBtn")
+const nonClickableLink = document.getElementById("nonClickableLink")
 
 const container1 = document.getElementById("container1")
 const container2 = document.getElementById("container2")
@@ -93,6 +95,13 @@ const printLetterToBoard = () => {
             if (num > 8 && num <= 16) container2.appendChild(img)
             if (num > 16 && num <= 25) container3.appendChild(img)
             if (num > 25) container4.appendChild(img)
+
+            if (num >= 35) {
+                finishedBtn.style.pointerEvents = "auto"
+                nonClickableLink.style.pointerEvents = "auto"
+                finishedBtn.style.backgroundColor = "#9966CC"
+                finishedBtn.style.color = "#fff"
+            }
 
             lowerCaseAlphabet.push(img)
         }
