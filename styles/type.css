@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    user-select: none;
 }
 
 body {
@@ -28,13 +29,62 @@ body {
     padding: 2rem;
 }
 
+.content span {
+    font-size: 1.5rem;
+}
+
 .notepad{
     background-color: #fff;
     width: 800px;
     height: 600px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notepad input {
+    color: #fff;
+    width: 4rem;
+    height: 4rem;
+    margin-top: 1rem;
+    border-radius: 50%;
+    user-select: none;
+    font-size: 0;
+    background-color: #9966CC;
+    border: 5px solid #9966CC;
+    cursor: pointer;
+}
+
+.notepad input:hover,
+.notepad input:focus{
+    border-color: rebeccapurple;
+    outline: none;
 }
 
 .letter-display{
     padding: 1rem;
+}
+
+.submit-btn{
+    font-family: inherit;
+    font-size: 1.25rem;
+    background-color: #9966CC;
+    color: #fff;
+    border: 3px solid #9966CC;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    border-color: #fff;
+}
+
+.finished-btn,
+.non-clickable-link{
+    background-color: rebeccapurple;
+    color: #9966CC;
+    pointer-events: none;
 }
 

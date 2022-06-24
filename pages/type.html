@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/type.css">
-    <!-- <script src="../scripts/type.js" defer></script> -->
     <script src="../scripts/type.js" defer></script>
     <title>Mypography</title>
 </head>
 <body>
     <div id="content" class="content">
-        <h1>Enjoy your new font</h1>
+        <p>NOTE: You can only write with lower case letters for now</p>
+        <span>Press the button and start typing</span>
         <div class="notepad" id="notepad">
-            <input type="text" id="keyboard">
+            <input type="text" id="keyboard" spellcheck="false">
             <div id="letterDisplay" class="letter-display"></div>
         </div>
+        <a id="nonClickableLink" class="non-clickable-link" href="#">
+            <button id="finishedBtn" class="submit-btn finished-btn">Add Capital Letters</button>
+        </a>
     </div>
 </body>
 </html>

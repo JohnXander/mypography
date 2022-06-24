@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    user-select: none;
 }
 
 body {
@@ -101,12 +102,12 @@ canvas {
     border-color: #fff;
 }
 
-/* .finished-btn,
+.finished-btn,
 .non-clickable-link{
     background-color: rebeccapurple;
     color: #9966CC;
     pointer-events: none;
-} */
+}
 
 
 

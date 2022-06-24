@@ -38,6 +38,9 @@ keyboard.addEventListener("keydown", (e) => {
 const typedLetters = []
 const letterDisplay = document.getElementById("letterDisplay")
 
+const finishedBtn = document.getElementById("finishedBtn")
+const nonClickableLink = document.getElementById("nonClickableLink")
+
 const changeLetterToImg = (event) => {
     typedLetters.push(letterToImg[event.key])
     displayLetters()
@@ -51,6 +54,10 @@ const displayLetters = () => {
         letterImg.src = url
         letterDisplay.appendChild(letterImg)   
     })
+    finishedBtn.style.pointerEvents = "auto"
+    nonClickableLink.style.pointerEvents = "auto"
+    finishedBtn.style.backgroundColor = "#9966CC"
+    finishedBtn.style.color = "#fff"
 }
 
 
