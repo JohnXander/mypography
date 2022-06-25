@@ -75,7 +75,7 @@ const nonClickableLink = document.getElementById("nonClickableLink")
 const validChars = Object.keys(letterToImg)
 
 const changeLetterToImg = (event) => {
-    if (event.key === "CapsLock") {
+    if (event.key === "CapsLock" || event.key === "Shift") {
     } else if (event.key === "Backspace") {
         letterDisplay.removeChild(letterDisplay.lastChild)
         typedLetters.pop()
