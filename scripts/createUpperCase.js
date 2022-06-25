@@ -1,3 +1,5 @@
+// The five boxing wizards jump quickly
+
 // sessionStorage.clear()
 
 const canvas = document.getElementById('canvas');
@@ -61,13 +63,15 @@ const drawLine = (x1, y1, x2, y2) => {
 const submitBtn = document.getElementById("submitBtn")
 const finishedBtn = document.getElementById("finishedBtn")
 const nonClickableLink = document.getElementById("nonClickableLink")
+const letterContainer = document.getElementById("letterContainer")
+letterContainer.style.height = "205px"
 
 const container1 = document.getElementById("container1")
 const container2 = document.getElementById("container2")
 const container3 = document.getElementById("container3")
 const container4 = document.getElementById("container4")
 
-const lowerCaseAlphabet = []
+const upperCaseAlphabet = []
 let num = 0
 
 submitBtn.addEventListener("click", () => {
@@ -88,23 +92,21 @@ const printLetterToBoard = () => {
 
             if (num === 4) container1.appendChild(space)
             if (num === 14) container2.appendChild(space)
-            if (num === 22) container3.appendChild(space)
-            if (num === 29 || num === 33) container4.appendChild(space)
+            if (num === 25) container3.appendChild(space)
 
-            if (num <= 8) container1.appendChild(img)
-            if (num > 8 && num <= 16) container2.appendChild(img)
-            if (num > 16 && num <= 25) container3.appendChild(img)
-            if (num > 25) container4.appendChild(img)
+            if (num <= 7) container1.appendChild(img)
+            if (num > 7 && num <= 20) container2.appendChild(img)
+            if (num > 20 && num <= 31) container3.appendChild(img)
 
-            if (num >= 35) {
+            if (num >= 31) {
                 finishedBtn.style.pointerEvents = "auto"
                 nonClickableLink.style.pointerEvents = "auto"
                 finishedBtn.style.backgroundColor = "#9966CC"
                 finishedBtn.style.color = "#fff"
             }
 
-            lowerCaseAlphabet.push(dataURL)
-            sessionStorage.setItem("lowerAlpha", JSON.stringify(lowerCaseAlphabet))
+            upperCaseAlphabet.push(dataURL)
+            sessionStorage.setItem("upperAlpha", JSON.stringify(upperCaseAlphabet))
         }
     })
     context.clearRect(0, 0, canvas.width, canvas.height);
