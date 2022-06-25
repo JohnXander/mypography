@@ -47,11 +47,13 @@ const nonClickableLink = document.getElementById("nonClickableLink")
 const validChars = Object.keys(letterToImg)
 
 const changeLetterToImg = (event) => {
-    if (!validChars.includes(event.key)) {
+    if (event.key === "Backspace") {
+        letterDisplay.removeChild(letterDisplay.lastChild)
+        typedLetters.pop()
+    } else if (!validChars.includes(event.key)) {
         alert("Cannot use that key yet")
     } else {
         typedLetters.push(letterToImg[event.key])
-        console.log(event)
         displayLetters()
     }
 }
@@ -70,5 +72,3 @@ const displayLetters = () => {
     finishedBtn.style.backgroundColor = "#9966CC"
     finishedBtn.style.color = "#fff"
 }
-
-
