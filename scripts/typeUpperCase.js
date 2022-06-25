@@ -83,7 +83,11 @@ const changeLetterToImg = (event) => {
         alert("Cannot use that key yet")
     } else {
         typedLetters.push(letterToImg[event.key])
-        displayLetters()
+        if (typedLetters.length > 240) {
+            alert("Maximum Capacity")
+        } else {
+            displayLetters()
+        }
     }
 }
 
