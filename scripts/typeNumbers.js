@@ -64,7 +64,14 @@ const letterToImg = {
     Y: upperCaseAlphabet[30],
     0: numbers[0],
     1: numbers[1],
-    2: numbers[2]
+    2: numbers[2],
+    8: numbers[3],
+    5: numbers[4],
+    7: numbers[5],
+    6: numbers[6],
+    4: numbers[7],
+    3: numbers[8],
+    9: numbers[9]
 }
 
 keyboard.addEventListener("keydown", (e) => {
@@ -107,6 +114,6 @@ const displayLetters = () => {
     
     finishedBtn.style.pointerEvents = "auto"
     nonClickableLink.style.pointerEvents = "auto"
-    finishedBtn.style.backgroundColor = "#9966CC"
+    finishedBtn.style.backgroundColor = "#3D3D3D"
     finishedBtn.style.color = "#fff"
 }

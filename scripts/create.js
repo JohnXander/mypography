@@ -83,6 +83,7 @@ const printLetterToBoard = () => {
             const img = document.createElement("img")
             const space = document.createElement("span")
             space.innerHTML = "___"
+            space.style.color = "#fff"
             img.src = dataURL
             img.id = `lowerCase${idx + 1}`
 
@@ -99,7 +100,7 @@ const printLetterToBoard = () => {
             if (num >= 35) {
                 finishedBtn.style.pointerEvents = "auto"
                 nonClickableLink.style.pointerEvents = "auto"
-                finishedBtn.style.backgroundColor = "#9966CC"
+                finishedBtn.style.backgroundColor = "#3D3D3D"
                 finishedBtn.style.color = "#fff"
             }
 

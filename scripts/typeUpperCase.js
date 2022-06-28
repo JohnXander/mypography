@@ -102,6 +102,6 @@ const displayLetters = () => {
     
     finishedBtn.style.pointerEvents = "auto"
     nonClickableLink.style.pointerEvents = "auto"
-    finishedBtn.style.backgroundColor = "#9966CC"
+    finishedBtn.style.backgroundColor = "#3D3D3D"
     finishedBtn.style.color = "#fff"
 }

@@ -83,21 +83,18 @@ const printLetterToBoard = () => {
             const img = document.createElement("img")
             const space = document.createElement("span")
             space.innerHTML = "___"
+            space.style.color = "#fff"
             img.src = dataURL
             img.id = `lowerCase${idx + 1}`
 
-            // if (num === 4) container1.appendChild(space)
-            // if (num === 14) container2.appendChild(space)
-            // if (num === 25) container3.appendChild(space)
+            if (num === 6) container1.appendChild(space)
 
-            container1.appendChild(img)
-            // if (num > 7 && num <= 20) container2.appendChild(img)
-            // if (num > 20 && num <= 31) container3.appendChild(img)
+            if (num <= 11) container1.appendChild(img)
 
             if (num >= 11) {
                 finishedBtn.style.pointerEvents = "auto"
                 nonClickableLink.style.pointerEvents = "auto"
-                finishedBtn.style.backgroundColor = "#9966CC"
+                finishedBtn.style.backgroundColor = "#3D3D3D"
                 finishedBtn.style.color = "#fff"
             }
 
