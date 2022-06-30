@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/create.css">
+    <script src="../scripts/createPunc.js" defer></script>
+    <title>Create | Mypography</title>
+    <link rel="icon" href="../img/icon.png" />
+</head>
+<body>
+    <div class="content">
+        <div class="instructions">
+            <p>NOTE: There are 12 punctuation marks</p>
+            <p class="title">Write the punctuation marks</p>
+            <span>
+                ? &nbsp " &nbsp - &nbsp : &nbsp ( &nbsp , 
+                &nbsp . &nbsp ) &nbsp ; &nbsp _ &nbsp ' &nbsp !
+            </span>
+        </div>
+        <div class="create-container">
+            <canvas id="canvas" width="200" height="200"></canvas>
+            <div class="btn-container">
+                <p>Write 1 punctuation mark in <br> the box and then click submit:</p>
+                <button id="submitBtn" class="submit-btn">Submit</button>
+            </div>
+        </div>
+        <div class="letter-container" id="letterContainer">
+            <div id="container1" class="container-row"></div>
+            <div id="container2" class="container-row"></div>
+            <div id="container3" class="container-row"></div>
+            <div id="container4" class="container-row"></div>
+        </div>
+        <a id="nonClickableLink" class="non-clickable-link" href="./typePunc.html">
+            <button id="finishedBtn" class="submit-btn finished-btn">Finished</button>
+        </a>
+    </div>
+</body>
+</html>

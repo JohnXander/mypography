@@ -1,9 +1,11 @@
 const lowerCaseAlphabet = JSON.parse(sessionStorage.getItem("lowerAlpha"))
 const upperCaseAlphabet = JSON.parse(sessionStorage.getItem("upperAlpha"))
 const numbers = JSON.parse(sessionStorage.getItem("numbers"))
+const punc = JSON.parse(sessionStorage.getItem("punc"))
 lowerCaseAlphabet.push("../img/space.jpg")
 upperCaseAlphabet.push("../img/space.jpg")
 numbers.push("../img/space.jpg")
+punc.push("../img/space.jpg")
 
 const keyboard = document.getElementById("keyboard")
 const notepad = document.getElementById("notepad")
@@ -71,7 +73,19 @@ const letterToImg = {
     6: numbers[6],
     4: numbers[7],
     3: numbers[8],
-    9: numbers[9]
+    9: numbers[9],
+    "?": punc[0],
+    '"': punc[1],
+    "-": punc[2],
+    ":": punc[3],
+    "(": punc[4],
+    ",": punc[5],
+    ".": punc[6],
+    ")": punc[7],
+    ";": punc[8],
+    "_": punc[9],
+    "'": punc[10],
+    "!": punc[11]
 }
 
 keyboard.addEventListener("keydown", (e) => {

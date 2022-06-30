@@ -83,7 +83,7 @@ const printLetterToBoard = () => {
             const img = document.createElement("img")
             const space = document.createElement("span")
             space.innerHTML = "___"
-            space.style.color = "#fff"
+            space.style.color = "#F5F5F5"
             img.src = dataURL
             img.id = `lowerCase${idx + 1}`
 
@@ -95,7 +95,7 @@ const printLetterToBoard = () => {
                 finishedBtn.style.pointerEvents = "auto"
                 nonClickableLink.style.pointerEvents = "auto"
                 finishedBtn.style.backgroundColor = "#3D3D3D"
-                finishedBtn.style.color = "#fff"
+                finishedBtn.style.color = "#F5F5F5"
             }
 
             numbers.push(dataURL)
