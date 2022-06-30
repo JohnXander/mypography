@@ -1,7 +1,3 @@
-// The five boxing wizards jump quickly
-
-// sessionStorage.clear()
-
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
