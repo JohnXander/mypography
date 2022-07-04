@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/create.css">
     <script src="../scripts/canvas.js" defer></script>
-    <script src="../scripts/createUpperCase.js" defer></script>
+    <script src="../scripts/printLetters.js" defer></script>
     <title>Create | Mypography</title>
     <link rel="icon" href="../img/icon.png" />
 </head>
@@ -21,7 +21,7 @@
             <canvas id="canvas" width="200" height="200"></canvas>
             <div class="btn-container">
                 <p>Write 1 <b>uppercase</b> letter in the box <br> and then click submit:</p>
-                <button id="submitBtn" class="submit-btn">Submit</button>
+                <button onclick="printLetterToBoard('upperChars')" class="submit-btn">Submit</button>
             </div>
         </div>
         <div class="letter-container" id="letterContainer">

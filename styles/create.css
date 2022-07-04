@@ -101,6 +101,13 @@ canvas {
     border-color: #F5F5F5;
 }
 
+.progress-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+}
+
 .finished-btn,
 .non-clickable-link{
     background: transparent;
