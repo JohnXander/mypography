@@ -1,7 +1,7 @@
 const lowerCaseAlphabet = JSON.parse(sessionStorage.getItem("lowerAlpha"))
 lowerCaseAlphabet.push("../img/space.jpg")
 
-const letterToImg = {
+let letterToImg = {
     a: lowerCaseAlphabet[29],
     b: lowerCaseAlphabet[8],
     c: lowerCaseAlphabet[6],
