@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/type.css">
-    <script src="../scripts/type.js" defer></script>
+    <script src="../scripts/typeLowerCase.js" defer></script>
     <script src="../scripts/typeUpperCase.js" defer></script>
     <script src="../scripts/typeNumbers.js" defer></script>
     <script src="../scripts/typePunc.js" defer></script>
@@ -17,13 +17,13 @@
 <body>
     <div id="content" class="content">
         <p>NOTE: You can now use punctuation</p>
-        <p class="title">Press the button and start typing</p>
+        <p class="title">Enjoy your new font</p>
         <div class="notepad" id="notepad">
             <input type="text" id="keyboard" spellcheck="false">
             <div id="letterDisplay" class="letter-display"></div>
         </div>
-        <a id="nonClickableLink" class="non-clickable-link" href="#">
-            <button id="finishedBtn" class="submit-btn finished-btn">Save Font</button>
+        <a onclick="clearSessionStorage()" id="nonClickableLink" class="non-clickable-link" href="../index.html">
+            <button id="finishedBtn" class="submit-btn finished-btn">Back to Homepage</button>
         </a>
     </div>
 </body>

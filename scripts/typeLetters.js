@@ -44,3 +44,5 @@ const displayLetters = () => {
     finishedBtn.style.backgroundColor = "#3D3D3D"
     finishedBtn.style.color = "#F5F5F5"
 }
+
+const clearSessionStorage = () => sessionStorage.clear()
