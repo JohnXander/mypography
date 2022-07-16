@@ -13,7 +13,10 @@
 <body>
     <div class="content">
         <div class="instructions">
-            <p>NOTE: There are 12 punctuation marks</p>
+            <div class="create-info">
+                <p>📝 There are 12 punctuation marks</p>
+                <p>⌚ Step 4 of 4</p>
+            </div>
             <p class="title">Write the punctuation marks</p>
             <span>
                 ? &nbsp " &nbsp - &nbsp : &nbsp ( &nbsp , 
@@ -23,7 +26,7 @@
         <div class="create-container">
             <canvas id="canvas" width="200" height="200"></canvas>
             <div class="btn-container">
-                <p>Write 1 punctuation mark in <br> the box and then click submit:</p>
+                <p>Write 1 punctuation mark in the box <br> and click submit (ignore spaces):</p>
                 <button onclick="printLetterToBoard('puncChars')" class="submit-btn">Submit</button>
             </div>
         </div>
@@ -33,9 +36,12 @@
             <div id="container3" class="container-row"></div>
             <div id="container4" class="container-row"></div>
         </div>
-        <a id="nonClickableLink" class="non-clickable-link" href="./typePunc.html">
-            <button id="finishedBtn" class="submit-btn finished-btn">Finished</button>
-        </a>
+        <div class="clear-and-reset">
+            <button class="submit-btn" onclick="location.reload()">Reset</button>
+            <a id="nonClickableLink" class="non-clickable-link" href="./typePunc.html">
+                <button id="finishedBtn" class="submit-btn finished-btn">Finished</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>

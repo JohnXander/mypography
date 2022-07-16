@@ -13,14 +13,17 @@
 <body>
     <div class="content">
         <div class="instructions">
-            <p>NOTE: All letters MUST be <b>lowercase</b></p>
+            <div class="create-info">
+                <p>📝 All letters MUST be <span style="text-decoration: underline;">lower case</span></p>
+                <p>⌚ Step 1 of 4</p>
+            </div>
             <p class="title">Write the sentence (1 letter at a time)</p>
             <span>the quick brown fox jumps over the lazy dog</span>
         </div>
         <div class="create-container">
             <canvas id="canvas" width="200" height="200"></canvas>
             <div class="btn-container">
-                <p>Write 1 <b>lowercase</b> letter in the box <br> and then click submit:</p>
+                <p>Write 1 <b>lower case</b> letter in the box <br> and click submit (ignore spaces):</p>
                 <button onclick="printLetterToBoard('lowerChars')" class="submit-btn">Submit</button>
             </div>
         </div>
@@ -30,9 +33,12 @@
             <div id="container3" class="container-row"></div>
             <div id="container4" class="container-row"></div>
         </div>
-        <a id="nonClickableLink" class="non-clickable-link" href="./typeLowerCase.html">
-            <button id="finishedBtn" class="submit-btn finished-btn">Finished</button>
-        </a>
+        <div class="clear-and-reset">
+            <button class="submit-btn" onclick="location.reload()">Reset</button>
+            <a id="nonClickableLink" class="non-clickable-link" href="./typeLowerCase.html">
+                <button id="finishedBtn" class="submit-btn finished-btn">Finished</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>

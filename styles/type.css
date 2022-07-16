@@ -88,3 +88,9 @@ body {
     color: #3D3D3D;
     pointer-events: none;
 }
+
+.create-info{
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+}

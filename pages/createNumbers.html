@@ -13,14 +13,17 @@
 <body>
     <div class="content">
         <div class="instructions">
-            <p>NOTE: Only write 1 number at a time</p>
+            <div class="create-info">
+                <p>📝 Only write 1 number at a time</p>
+                <p>⌚ Step 3 of 4</p>
+            </div>
             <p class="title">Write the phone number</p>
             <span>01285 764390</span>
         </div>
         <div class="create-container">
             <canvas id="canvas" width="200" height="200"></canvas>
             <div class="btn-container">
-                <p>Write 1 number in the box <br> and then click submit:</p>
+                <p>Write 1 number in the box and <br> click submit (ignore spaces):</p>
                 <button onclick="printLetterToBoard('numbers')" class="submit-btn">Submit</button>
             </div>
         </div>
@@ -30,9 +33,12 @@
             <div id="container3" class="container-row"></div>
             <div id="container4" class="container-row"></div>
         </div>
-        <a id="nonClickableLink" class="non-clickable-link" href="./typeNumbers.html">
-            <button id="finishedBtn" class="submit-btn finished-btn">Finished</button>
-        </a>
+        <div class="clear-and-reset">
+            <button class="submit-btn" onclick="location.reload()">Reset</button>
+            <a id="nonClickableLink" class="non-clickable-link" href="./typeNumbers.html">
+                <button id="finishedBtn" class="submit-btn finished-btn">Finished</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>
